@@ -30,6 +30,7 @@ router.post('/',validateReview,CatchAsync(async (req,res)=>{
 }))
 
 router.delete('/:reviewId',CatchAsync(async (req,res)=>{
+    
     const {id,reviewId} = req.params
     await Campground.findByIdAndUpdate(id, {$pull : {reviews : reviewId}});
     await Review.findByIdAndDelete(reviewId);
