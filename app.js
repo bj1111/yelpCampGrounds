@@ -15,7 +15,8 @@ const campgroundsRoutes = require('./routes/campground')
 const reviewsRoutes = require('./routes/reviews')
 const usersRoutes = require('./routes/user')
 
-mongoose.connect('mongodb://127.0.0.1:27017/camp-ground')
+
+mongoose.connect('mongodb+srv://gautam1411:gautam1411@cluster0.jb9asz8.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
         console.log("MONGODB CONNECTED !!!!!!");
 
@@ -87,6 +88,7 @@ app.use((err, req, res, next) => {
     if (!err.message) err.message = "something went wrong"
     res.status(statusCode).render('error', { err })
 })
+
 app.listen(3000, () => {
     console.log('listening on port 3000 !!!!!!!');
 });
