@@ -7,6 +7,11 @@ const campGroundSchema = new Schema({
     description: String,
     location: String,
     image: String,
+    author:{
+        type:  mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+
+    },
     reviews : [
         {
             type: mongoose.Schema.Types.ObjectId,

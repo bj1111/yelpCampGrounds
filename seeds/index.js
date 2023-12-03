@@ -27,7 +27,9 @@ const dbSeeds = async () =>{
             title: `${giveName(descriptors)} ${giveName(places)}`,
             image : 'https://source.unsplash.com/random?woods',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, fuga quisquam necessitatibus enim eum totam, architecto, sequi reiciendis laboriosam mollitia voluptas. Natus voluptatibus hic neque eos rem cumque, quas incidunt.',
-            price : p
+            price : p,
+            author: "6564d8ae70b036b4102670d7"
+            
 
         })
         await campNew.save();
