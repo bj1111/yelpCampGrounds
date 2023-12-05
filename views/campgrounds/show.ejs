@@ -1,14 +1,9 @@
 <% layout('layouts/boilerplate') %>
   <link rel="stylesheet" href="/stylesheets/star.css">
-  <link rel="stylesheet" href="/stylesheets/campground.css">
-  
-  <div class="row mb-3 parent">
+  <div class="row mb-3">
+    <div class="col-6">
 
-
-    <div class="col-6 _content ">
-
-      
-      <div class="card mb-3 control">
+      <div class="card mb-3">
         <img src="<%= campground.image %>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">
@@ -43,11 +38,8 @@
             </div>
       </div>
     </div>
-    </div>
     <% if(currentUser) { %>
-      <div class="col-6 _content">
-
-        <div class="control">
+      <div class="col-6">
         <div>
           <h2>Leave A review</h2>
         </div>
@@ -107,7 +99,9 @@
               <% } %>
           </div>
 
+
+
       </div>
-      </div>
+
 
   </div>
