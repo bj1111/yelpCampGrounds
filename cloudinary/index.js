@@ -1,25 +1,23 @@
-const cloudinary = require('cloudinary').v2
-const {CloudinaryStorage} = require('multer-storage-cloudinary')
+const cloudinary = require('cloudinary').v2;
+const {cloudinaryStorage, CloudinaryStorage} = require('multer-storage-cloudinary');
 
 cloudinary.config({
-    cloud_name:process.env.CLOUDINARY_CLOUD_NAME,
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key:process.env.CLOUDINARY_KEY,
-    api_secret:process.env.CLOUDINARY_SECERET
-
+    api_secret:process.env.CLOUDINARY_SECRET
 })
 
-const storage = new CloudinaryStorage({
+ const storage = new CloudinaryStorage({
     cloudinary,
     params:{
-        folder:'YelpCamp',
-        allowedFormats:['jpeg','jpg','png']
+        folder: 'YelpCamp',
+    allowedFormats: ['jpeg','png','jpg']
+
 
     }
-   
-
+    
 })
 
-module.exports ={
+module.exports = {
     cloudinary,
-    storage
-}
+    storage}

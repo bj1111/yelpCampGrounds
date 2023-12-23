@@ -25,10 +25,19 @@ const dbSeeds = async () =>{
         const campNew = new Campground({
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${giveName(descriptors)} ${giveName(places)}`,
-            image : 'https://source.unsplash.com/random?woods',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, fuga quisquam necessitatibus enim eum totam, architecto, sequi reiciendis laboriosam mollitia voluptas. Natus voluptatibus hic neque eos rem cumque, quas incidunt.',
             price : p,
-            author: "6564d8ae70b036b4102670d7"
+            author: "6564d8ae70b036b4102670d7",
+            images: [
+                {
+                  url: 'https://res.cloudinary.com/dlmhvrt6l/image/upload/v1702906054/YelpCamp/jfttjwfgigaqbjtoscwy.jpg',
+                  filename: 'YelpCamp/jfttjwfgigaqbjtoscwy',
+                },
+                {
+                  url: 'https://res.cloudinary.com/dlmhvrt6l/image/upload/v1702906054/YelpCamp/jiq1vakcxrmyebr8ylr3.jpg',
+                  filename: 'YelpCamp/jiq1vakcxrmyebr8ylr3',
+                }
+              ]
             
 
         })
