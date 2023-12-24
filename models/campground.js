@@ -14,10 +14,24 @@ const campGroundSchema = new Schema({
     title: String,
     price: Number,
     description: String,
-    location: String,
+    geometry: {
+        type:{
+            type:String,
+            enum:['Point'],
+            required:true
+        },
+        coordinates:{
+            type:[Number],
+            required:true
+        }
+    },
     images: [
         ImagesSchema  
     ],
+    location:{
+        type:String,
+        required:true
+    },
 
     author:{
         type:  mongoose.Schema.Types.ObjectId,

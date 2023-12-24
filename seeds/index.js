@@ -28,6 +28,7 @@ const dbSeeds = async () =>{
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, fuga quisquam necessitatibus enim eum totam, architecto, sequi reiciendis laboriosam mollitia voluptas. Natus voluptatibus hic neque eos rem cumque, quas incidunt.',
             price : p,
             author: "6564d8ae70b036b4102670d7",
+            geometry: { type: 'Point', coordinates: [cities[random1000].longitude,cities[random1000].latitude ] },
             images: [
                 {
                   url: 'https://res.cloudinary.com/dlmhvrt6l/image/upload/v1702906054/YelpCamp/jfttjwfgigaqbjtoscwy.jpg',
