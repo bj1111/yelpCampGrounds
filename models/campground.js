@@ -10,6 +10,7 @@ const ImagesSchema = new Schema(
 ImagesSchema.virtual('thumbnail').get(function() {
     return this.url.replace('/upload','/upload/w_200')
 })
+const opts = { toJSON :{virtuals: true}}
 const campGroundSchema = new Schema({
     title: String,
     price: Number,
@@ -44,7 +45,13 @@ const campGroundSchema = new Schema({
             ref : 'Review'
         }
     ]
-});
+},opts);
+
+campGroundSchema.virtual('properties.popUpMarkup').get(function() {
+    return `<a href="/campgrounds/${this._id}">${this.title}</a>`
+})
+
+
 
 campGroundSchema.post('findOneAndDelete', async function(doc){
     if(doc.reviews.length)
